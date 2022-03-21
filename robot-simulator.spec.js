@@ -33,3 +33,6 @@ describe("Robot", function() {
     );
   });
 });
+
+
+//npx jest robot-simulator.spec.js 
