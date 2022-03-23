@@ -11,26 +11,26 @@ execute(string) {
         for (const direction of this.commands) {
             switch(direction) {
                 case 'R': //If the direction is right we move clockwise...
-                this.bearing == 'NORTH' ? this.bearing == 'EAST' //turning right when facing north means the robot will now face east
-                :this.bearing == 'EAST' ? this.bearing == 'SOUTH' //turning right when facing east means the robot will now face south
-                :this.bearing == 'SOUTH' ? this.bearing == 'WEST' //turning right when facing south means the robot will now face west
-                :this.bearing == 'WEST' ? this.bearing == 'NORTH' //turning right when facing west means the robot will now face north
+                if (this.bearing == 'NORTH') {this.bearing == 'EAST'} //turning right when facing north means the robot will now face east
+                if (this.bearing == 'EAST') {this.bearing == 'SOUTH'} //turning right when facing east means the robot will now face south
+                if (this.bearing == 'SOUTH') {this.bearing == 'WEST'} //turning right when facing south means the robot will now face west
+                if (this.bearing == 'WEST') {this.bearing == 'NORTH'} //turning right when facing west means the robot will now face north
                 
                 break;
 
                 case 'L': //If the direction is left we move anticlockwise...
-                this.bearing == 'NORTH' ? this.bearing == 'WEST' //turning left when facing north means the robot will now face west
-                :this.bearing == 'EAST' ? this.bearing == 'NORTH' //turning left when facing east means the robot will now face north
-                :this.bearing == 'SOUTH' ? this.bearing == 'EAST' //turning left when facing south means the robot will now face east
-                :this.bearing == 'WEST' ? this.bearing == 'SOUTH' //turning left when facing west means the robot will now face south
+                if (this.bearing == 'NORTH') {this.bearing == 'WEST'} //turning left when facing north means the robot will now face west
+                if (this.bearing == 'EAST') {this.bearing == 'NORTH'} //turning left when facing east means the robot will now face north
+                if (this.bearing == 'SOUTH') {this.bearing == 'EAST'} //turning left when facing south means the robot will now face east
+                if (this.bearing == 'WEST') {this.bearing == 'SOUTH'} //turning left when facing west means the robot will now face south
                 
                 break;
 
                 case 'A': //North and South are on the y axis. East and West are on the x axis.
-                this.bearing == 'NORTH' ? this.y+1 //move up one position on the y axis
-                :this.bearing == 'EAST' ? this.x+1 //move up one position on the x axis
-                :this.bearing == 'SOUTH' ? this.y-1 //move down one position on the y axis
-                :this.bearing == 'WEST' ? this.x-1 //move left one position on the x axis
+                if (this.bearing == 'NORTH') {this.y+1} //move up one position on the y axis
+                if (this.bearing == 'EAST') {this.x+1} //move up one position on the x axis
+                if (this.bearing == 'SOUTH') {this.y-1} //move down one position on the y axis
+                if (this.bearing == 'WEST') {this.x-1} //move left one position on the x axis
                 
                 // break;
             }
